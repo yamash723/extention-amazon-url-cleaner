@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Amazon URL Cleaner",
+  "version": "0.1",
+  "description": "Removes unnecessary strings from Amazon product page URLs.",
+  "permissions": [
+    "declarativeNetRequest"
+  ],
+  "host_permissions": ["https://www.amazon.co.jp/*"],
+  "declarative_net_request": {
+    "rule_resources": [{
+      "id": "ruleset",
+      "enabled": true,
+      "path": "rules.json"
+    }]
+  }
+}
