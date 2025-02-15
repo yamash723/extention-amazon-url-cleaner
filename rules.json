@@ -26,5 +26,33 @@
       "regexFilter": "^https://www.amazon.co.jp/dp/([A-Z0-9]{10})(/.*)?$",
       "resourceTypes": ["main_frame"]
     }
+  },
+  {
+    "id": 3,
+    "priority": 3,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "regexSubstitution": "https://www.amazon.co.jp/dp/\\1/"
+      }
+    },
+    "condition": {
+      "regexFilter": "^https://www.amazon.co.jp/gp/product/([A-Z0-9]{10})(/.*)?$",
+      "resourceTypes": ["main_frame"]
+    }
+  },
+  {
+    "id": 4,
+    "priority": 4,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "regexSubstitution": "https://www.amazon.co.jp/dp/\\1/"
+      }
+    },
+    "condition": {
+      "regexFilter": "^https://www.amazon.co.jp/gp/product/([A-Z0-9]{10})(\\?.*)?$",
+      "resourceTypes": ["main_frame"]
+    }
   }
 ]
